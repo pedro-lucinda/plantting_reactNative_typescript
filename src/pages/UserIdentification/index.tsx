@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Button } from "../components/Button";
-import colors from "../styles/colors";
-import fonts from "../styles/fonts";
+import { Button } from "../../components/Button";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { styles } from "./style";
 import {
   SafeAreaView,
-  StyleSheet,
   Text,
   TextInput,
   View,
@@ -13,7 +12,9 @@ import {
   TouchableWithoutFeedback,
   Platform,
   Keyboard,
+  Alert,
 } from "react-native";
+import colors from "../../styles/colors";
 
 export function UserIdentification() {
   const navegation = useNavigation();
@@ -31,6 +32,30 @@ export function UserIdentification() {
   function handleInputChange(value: string) {
     setIsFilled(!!value);
     setName(value);
+  }
+
+  async function handleConfirmation() {
+    if (!name || name.trim() === "") {
+      return Alert.alert("Me diz como chamar você 😅");
+    }
+
+    if (name.split("").length > 20 || name.split("").length < 2) {
+      return Alert.alert("Numero de caracteres invalido.");
+    }
+
+    try {
+      await AsyncStorage.setItem("@plantting:user", name);
+      navegation.navigate("Confirmation", {
+        title: "Prontinho",
+        subtitle:
+          "Agora vamos comecar a cuidar das suas plantinhas com muito cuidado.",
+        buttonTitle: "Comecar",
+        icon: "smile",
+        nextScreen: "PlantSelect",
+      });
+    } catch {
+      return Alert.alert("Nao foi possivel salvar seu nome :/.");
+    }
   }
 
   return (
@@ -60,10 +85,7 @@ export function UserIdentification() {
                 onChangeText={handleInputChange}
               />
               <View style={styles.footer}>
-                <Button
-                  title="Confirmar"
-                  onPress={() => navegation.navigate("Confirmation")}
-                />
+                <Button title="Confirmar" onPress={handleConfirmation} />
               </View>
             </View>
           </View>
@@ -72,50 +94,3 @@ export function UserIdentification() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "space-around",
-  },
-  content: {
-    flex: 1,
-    width: "100%",
-  },
-  form: {
-    flex: 1,
-    justifyContent: "center",
-    paddingHorizontal: 54,
-    alignItems: "center",
-  },
-  header: {
-    alignItems: "center",
-  },
-  emoji: {
-    fontSize: 34,
-  },
-  input: {
-    borderBottomWidth: 1,
-    borderColor: colors.gray,
-    width: "100%",
-    fontSize: 18,
-    marginTop: 50,
-    padding: 10,
-    textAlign: "center",
-  },
-  title: {
-    fontSize: 24,
-    lineHeight: 32,
-    textAlign: "center",
-    color: colors.heading,
-    fontFamily: fonts.heading,
-    marginTop: 20,
-  },
-  footer: {
-    width: "100%",
-    marginTop: 40,
-    paddingHorizontal: 20,
-  },
-});

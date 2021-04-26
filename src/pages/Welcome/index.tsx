@@ -1,18 +1,15 @@
 import React from "react";
-import wateringImg from "../assets/watering.png";
-import colors from "../styles/colors";
-import fonts from "../styles/fonts";
+import wateringImg from "../../assets/watering.png";
 import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";
 import {
   Text,
   Image,
   TouchableOpacity,
-  StyleSheet,
   SafeAreaView,
-  Dimensions,
   View,
 } from "react-native";
+import { styles } from "./style";
 
 export function Welcome() {
   const navegation = useNavigation();
@@ -42,50 +39,3 @@ export function Welcome() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "space-around",
-  },
-  title: {
-    fontSize: 28,
-    lineHeight: 34,
-    fontWeight: "bold",
-    textAlign: "center",
-    color: colors.heading,
-    fontFamily: fonts.heading,
-    marginTop: 20,
-  },
-  subTitle: {
-    textAlign: "center",
-    fontSize: 18,
-    paddingHorizontal: 20,
-    color: colors.heading,
-    fontFamily: fonts.text,
-  },
-
-  image: {
-    height: Dimensions.get("window").width * 0.7,
-  },
-  button: {
-    backgroundColor: colors.green_800,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 16,
-    width: 56,
-    height: 56,
-  },
-  btnIcon: {
-    color: colors.white,
-    fontSize: 32,
-  },
-  wrapper: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "space-around",
-    paddingHorizontal: 10,
-    paddingVertical: 20,
-  },
-});

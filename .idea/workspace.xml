@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e1d2fd5-cc72-401c-90b2-727ba092ad38" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/adaptive-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/load.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlantSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UserIdentification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UserIdentification.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/stack.routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/stack.routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2382" y="134" width="1200" height="770" key="AVDManager" timestamp="1619391138687">
+      <screen x="1919" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2382" y="134" width="1200" height="770" key="AVDManager/1919.0.2560.1080/0.0.1920.1036@1919.0.2560.1080" timestamp="1619391138687" />
     <state x="2655" y="169" key="SettingsEditor" timestamp="1618920036364">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
